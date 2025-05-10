@@ -5,7 +5,6 @@ import rehypeKatex from 'rehype-katex';
 import remarkGfm from 'remark-gfm';
 import remarkMath from 'remark-math';
 
-import { PluggableList } from 'react-markdown/lib/react-markdown';
 import { withProvider } from '..';
 import { Code } from './CodeBlock';
 import { useStyles } from './style';
@@ -18,8 +17,8 @@ export interface MarkdownProps {
   className?: string;
   onDoubleClick?: () => void;
   style?: CSSProperties;
-  rehypePlugins?: PluggableList;
-  remarkPlugins?: PluggableList;
+  rehypePlugins?: any;
+  remarkPlugins?: any;
   components?: Components;
 }
 
@@ -61,10 +60,11 @@ const Markdown = memo<MarkdownProps>(
     return (
       <Typography className={className} onDoubleClick={onDoubleClick} style={style}>
         <ReactMarkdown
+          //@ts-ignore
           className={styles.markdown}
           components={components}
-          rehypePlugins={rehypePlugins as PluggableList}
-          remarkPlugins={remarkPlugins as PluggableList}
+          rehypePlugins={rehypePlugins as any}
+          remarkPlugins={remarkPlugins as any}
           {...rest}
         >
           {children}
