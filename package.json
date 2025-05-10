@@ -1,5 +1,5 @@
 {
-  "name": "@ant-design/pro-editor",
+  "name": "@bashid/pro-editor",
   "version": "1.2.1",
   "description": "🌟 Lightweight Editor UI Framework",
   "homepage": "https://github.com/ant-design/pro-editor",
@@ -94,7 +94,7 @@
     "react-copy-to-clipboard": "^5.1.0",
     "react-hotkeys-hook": "^4.5.1",
     "react-layout-kit": "^1.9.0",
-    "react-markdown": "^8.0.7",
+    "react-markdown": "^10",
     "react-rnd": "^10.4.12",
     "react-window": "^1.8.10",
     "reactflow": "^11.11.4",
